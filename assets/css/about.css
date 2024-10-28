@@ -1,0 +1,110 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Make header position relative for absolute positioning of back button */
+}
+
+.back-button {
+    position: absolute;
+    top: 15px; /* Adjust as needed */
+    left: 15px; /* Adjust as needed */
+    color: #ff0000; /* Red color for the arrow icon */
+    font-size: 24px; /* Size of the arrow icon */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #f0c674; /* Change color on hover */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.glassmorphism {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2); /* White tinted glass background */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* White border */
+    width: 80%;
+    max-width: 800px; /* Responsive max width */
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 60px; /* Adjust logo size */
+    height: auto;
+}
+
+.glassmorphism h2 {
+    margin: 60px 0 10px; /* Adjust margin to avoid overlap with logo */
+    color: #ff0000; /* Red color for section headings */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: #ffffff; /* White icons */
+    margin: 0 10px;
+    font-size: 24px; /* Adjust size of icons */
+    text-decoration: none;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+    color: #ff0000; /* Change color on hover to red */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 55px; /* Smaller logo for mobile */
+    }
+
+    .glassmorphism h2 {
+        margin: 50px 0 10px; /* Adjust margin for mobile */
+    }
+
+    .back-button {
+        font-size: 20px; /* Smaller icon size for mobile */
+    }
+}

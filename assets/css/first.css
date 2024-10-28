@@ -1,0 +1,230 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../images/backgrounds/bg.jpg'); /* Update to your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between the logo and text */
+    width: 90%; /* Set width for responsiveness */
+    max-width: 700px; /* Optional: Set a maximum width */
+    padding: 10px 20px; /* Adjust padding for better fit */
+    margin: 20px auto; /* Center the header with top and bottom margin */
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background for glass effect */
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* College name styling */
+.college-name {
+    font-family: 'Marvel', sans-serif; /* Marvel-themed font */
+    font-size: 1.8em; /* Increased size */
+    color: white;
+    margin: 0; /* Removed margin */
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+/* Club name styling */
+.club-name {
+    font-family: 'Roboto', sans-serif; /* Roboto font for club name */
+    font-size: 1.2em; /* Increased size */
+    color: white;
+    margin: 0; /* Removed margin */
+}
+
+/* Text container to center text */
+.text-container {
+    text-align: center; /* Center text */
+    flex-grow: 1; /* Allow the text container to grow */
+    margin: 0 10px; /* Small margin to separate from logos */
+}
+
+/* Logo styling */
+.logo {
+    width: 60px; /* Increased size for logos */
+    height: auto; /* Keep aspect ratio */
+}
+
+/* Event logo container */
+.event-logo-container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack logos vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: calc(100vh - 200px); /* Center in the remaining viewport height */
+    margin-top: 20px; /* Margin above event logo container */
+}
+
+/* Logos above event */
+.logos-above-event {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 10px; /* Space between logos and event logo */
+}
+
+/* Smaller logo styling */
+.small-logo {
+    width: 40px; /* Size of the logos above the event logo */
+    height: auto; /* Keep aspect ratio */
+    margin: 0 5px; /* Space between logos */
+}
+
+/* Event logo styling */
+.event-logo {
+    width: 300px; /* Increase the size of the event logo */
+    height: auto; /* Keep aspect ratio */
+}
+
+/* Container for join message and button */
+/* Join section */
+.join-section {
+    display: flex; /* Use flexbox to center items */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    position: absolute; /* Positioning it relative to the viewport */
+    top: 80%; /* Move it to 80% of the viewport height */
+    transform: translateY(-50%); /* Center vertically */
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Set a max width to prevent stretching on larger screens */
+}
+
+/* Text for joining the event */
+.join-event {
+    font-family: 'Marvel', sans-serif; /* Use Marvel font for the message */
+    color: white; /* White color for visibility */
+    margin: 10px 0; /* Margin above and below the text */
+}
+
+/* Join button styling with gradient effect */
+.join-button {
+    font-family: 'Marvel', sans-serif; /* Use Marvel font for the button */
+    font-size: 1.5em; /* Button font size for emphasis */
+    color: white; /* Text color */
+    background: linear-gradient(45deg, #c62828, #ffeb3b); /* Gradient from dark red to yellow */
+    border: none; /* No border */
+    border-radius: 8px; /* Slightly rounded corners for rectangular shape */
+    padding: 20px; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    width: 200px; /* Set fixed width for rectangular shape */
+    text-align: center; /* Center text */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6); /* Initial glow effect */
+    animation: pulse 1.5s infinite; /* Pulsing animation */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+}
+
+
+/* Pulsing effect keyframes */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 0.8); /* Intensified glow */
+        transform: scale(1.05); /* Slightly enlarge */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+        transform: scale(1); /* Back to original size */
+    }
+}
+
+/* Optional: Add a slight change in background color to simulate a lighting effect */
+.join-button:active {
+    background: linear-gradient(45deg, #b71c1c, #fbc02d); /* Darken gradient on click */
+}
+
+/* Inner glow effect */
+.join-button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, rgba(0, 255, 255, 0) 70%);
+    border-radius: 8px; /* Match border-radius of button */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place it behind the button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .college-name {
+        font-size: 1.5em; /* Reduced font size for responsiveness */
+    }
+
+    .club-name {
+        font-size: 1em; /* Reduced font size for responsiveness */
+    }
+
+    .logo {
+        width: 50px; /* Smaller logo size for mobile */
+    }
+
+    .event-logo {
+        width: 500px; /* Adjust event logo size for tablets */
+    }
+
+    .join-event {
+        font-size: 1.3em; /* Adjust font size for smaller screens */
+    }
+
+    .join-button {
+        font-size: 1.2em; /* Adjust button size for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .college-name {
+        font-size: 1.3em; /* Further reduced font size for small screens */
+    }
+
+    .club-name {
+        font-size: 0.9em; /* Further reduced font size for small screens */
+    }
+
+    .logo {
+        width: 40px; /* Further smaller logo size for mobile */
+    }
+
+    .event-logo {
+        width: 400px; /* Further smaller event logo size for mobile */
+    }
+
+    .join-event {
+        font-size: 1.1em; /* Further reduced font size for small screens */
+    }
+
+    .join-button {
+        font-size: 1em; /* Further adjust button size for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
